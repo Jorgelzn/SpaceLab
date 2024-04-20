@@ -1,5 +1,5 @@
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1.3.0/dist/aframe-master.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
 <style>
   .arjs-loader {
@@ -33,22 +33,16 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
-    <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-    <a-nft
-      type="nft"
-      url="./nft/4WPRNN3"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-    >
+
+    <a-marker preset="hiro">
       <a-entity
-        gltf-model="./bird/scene.gltf"
-        scale="5 5 5"
-        position="150 300 -100"
-      >
-      </a-entity>
-    </a-nft>
+      gltf-model="./bird/scene.gltf"
+      scale="5 5 5"
+      position="150 300 -100"
+    >
+    </a-entity>
+    </a-marker>
+
     <a-entity camera></a-entity>
   </a-scene>
 </body>
