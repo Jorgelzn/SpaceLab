@@ -1,0 +1,19 @@
+{
+  "name": "spacelab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jorgelzn/SpaceLab.git"
+  },
+  "private": true,
+  "dependencies": {
+    "three": "^0.167.1",
+    "vite": "^5.4.1"
+  }
+}

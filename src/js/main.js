@@ -1,5 +1,5 @@
 // main.js
-import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js';
+import * as THREE from 'three';
 
 // Set up the scene
 const scene = new THREE.Scene();
@@ -10,7 +10,7 @@ document.body.appendChild(renderer.domElement);
 
 // Create a cube
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const material = new THREE.MeshBasicMaterial({ color: 0xb3d9ff });
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
