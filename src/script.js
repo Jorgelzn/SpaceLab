@@ -1,5 +1,7 @@
 import * as THREE from 'three';
+import vertexShader from './shaders/vertexShader.glsl';
 
+import fragmentShader from './shaders/fragmentShader.glsl';
 
 // Set up
 const scene = new THREE.Scene();
@@ -21,8 +23,10 @@ camera.position.z = 5; //Position the camera
 
 // Create a cube
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0xb3d9ff });
-const cube = new THREE.Mesh(geometry, material);
+//const material = new THREE.MeshBasicMaterial({ color: 0xb3d9ff });ç
+const customShaderMaterial = new THREE.ShaderMaterial(vertexShader,fragmentShader)
+//material.wireframe = true;
+const cube = new THREE.Mesh(geometry, customShaderMaterial);
 scene.add(cube);
 
 

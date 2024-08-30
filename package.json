@@ -1,19 +1,18 @@
 {
-  "name": "spacelab",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "name": "jorgelzn",
+  "version": "0.0.0",
+  "source": "src/index.html",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "server": "del /Q dist | parcel",
+    "build": "del /Q build | parcel build --public-url ./ --dist-dir build",
+    "deploy": "gh-pages -d build"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Jorgelzn/SpaceLab.git"
-  },
-  "private": true,
   "dependencies": {
-    "three": "^0.167.1",
-    "vite": "^5.4.1"
+    "gh-pages": "^6.1.0",
+    "parcel": "^2.10.3",
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-glsl": "^2.10.3"
   }
 }
